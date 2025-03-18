@@ -216,3 +216,40 @@ nav {
     color: white;
   }
 }
+
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color: blue; 
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px; 
+  border-bottom-left-radius: 80%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding-top: 120px; 
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
