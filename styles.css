@@ -1,8 +1,32 @@
-img{
-  object-fit: cover;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html,
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  background: white;
+  color: #000;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+img {
+  object-fit: cover;
 }
 
 header {
@@ -18,24 +42,26 @@ a {
 }
 
 nav {
-  
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin: 20px;
+  margin-right: 20px;
   width: 100%;
   height: 30px;
   align-items: center;
   .left-nav {
     align-items: left;
     color: black;
-    .title{
+    .title {
       color: black;
       font-weight: bold;
       font-size: large;
     }
   }
 
-
-  .center-nav > a{
+  .center-nav > a {
     margin-left: 15px;
     margin-right: 15px;
     align-items: center;
@@ -45,47 +71,232 @@ nav {
 
   .right-nav {
     .book-trip {
-      padding: 10px 20px; 
-      border: none; 
-      background-color: black; 
-      color: white; 
-      font-size: 16px; 
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      border-radius: 25px; 
-      cursor: pointer; 
+      padding: 10px 20px;
+      border: none;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      border-radius: 25px;
+      cursor: pointer;
       transition: background-color 0.3s ease;
     }
   }
 }
 
-.hero-section{
+.hero {
   display: flex;
+  padding: 4rem;
   position: relative;
+  background: linear-gradient(to right, #dfefff, #ffffff);
+  border-radius: 40px;
   width: 100%;
-  height: 700px;
-  background-image: url('resources/ad79f96a8cb44db2e9289a2223a1f064.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 20px;
-  
-  .circle{
+  height: 500px;
+  margin-left: 2%;
+  margin-right: 2%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Slider Indicator */
+
+.slider-indicator {
+  display: flex;
+  height: inherit;
+  gap: 25%;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  .circle {
+    width: 30px;
+    background: linear-gradient(to right, #dfefff, #ffffff);
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 20px;
-    vertical-align: bottom;
-  
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
 
-  .flight-img{
-    width: 50%;
-    position: absolute;
-
+  .slider-indicator circle:first-child {
+    margin-top: -20px;
   }
 }
 
+.slider-indicator::after {
+  content: "";
+  background: #fff;
+  height: 65%;
+  width: 5px;
+  display: block;
+  position: absolute;
+  left: 12px;
+  z-index: -1;
+}
 
+.circle-active {
+  background-color: white;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h4 {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-content {
+  position: absolute;
+  left: 20%;
+  min-width: 20%;
+
+  .hero-content h4 {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .btn-primary {
+    background-color: #2980ff;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .hero-section-btn {
+    display: flex;
+  }
+
+  .play-btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+  }
+
+  .play-btn {
+    display: flex;
+    font-size: 8px;
+    border-radius: 100%;
+    border: none;
+    background-color: #1c5fc4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: #1c5fc4;
+  }
+}
+
+/* Hero Image */
+/* .hero-image-wrapper {
+  position: absolute;
+  border: 2px solid black;
+  z-index: 13;
+  left: 50%;
+  .hero-image {
+    max-width: 600px;
+  }
+} */
+
+/* Know More Card */
+.know-more-card {
+  position: relative;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: white;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  .know-more-card-up {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .know-more-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .know-more-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-images img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: -20px;
+    margin-right: 5px;
+  }
+
+  .card-images img:first-child {
+    margin-left: 0;
+  }
+}
+
+/* Buttons */
+
+/* Hero Section */
+
+/* Links section */
 
 .links {
   display: flex;
@@ -94,7 +305,13 @@ nav {
   height: 50px;
   justify-content: space-around;
   width: 100%;
-  .folow{
+
+  .link-logo {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+  }
+  .folow {
     align-items: center;
     padding: 10px;
     display: flex;
@@ -105,22 +322,24 @@ nav {
     border: 1px solid black;
     border-radius: 20px;
     margin-left: 10px;
-    img{
+    .folow > img {
+      position: static;
       height: 30px;
+      min-width: 20px;
     }
   }
 }
 
+/* Popular Destination Section */
 
-.popular-destination-section{
-
+.popular-destination-section {
   margin-top: 10px;
 
   margin-left: 2%;
   margin-right: 2%;
   gap: 0;
 
-  .popular-destination-heading{
+  .popular-destination-heading {
     margin-left: 20px;
     margin-bottom: none;
     font-size: 40px;
@@ -137,17 +356,15 @@ nav {
     margin-bottom: 10px;
   }
 
-  
   .scroll-button {
-    display: flex;  
+    display: flex;
     justify-content: space-between;
-    
     width: 120px;
     height: 40px;
     font-size: 30px;
     align-items: center;
   }
-  
+
   .left-scroll {
     display: flex;
     justify-content: center;
@@ -160,7 +377,7 @@ nav {
     color: black;
     background: lightgrey;
   }
-  
+
   .right-scroll {
     display: flex;
     justify-content: center;
@@ -173,29 +390,28 @@ nav {
     border-radius: 50%;
     padding: 4px;
   }
-  
+
   .cards {
-    
     display: flex;
     justify-content: space-around;
   }
 
-  .destination-card{
+  .destination-card {
     display: flex;
     flex-direction: column;
     width: 30%;
   }
 
-  .destination-card > img{
+  .destination-card > img {
     width: 100%;
     border-radius: 20px;
   }
 
-  .destination-details{
+  .destination-details {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    .location{
+    .location {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -203,53 +419,304 @@ nav {
       margin-left: 4px;
     }
   }
-  .star{
+  .star {
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 2px solid blue;
     width: 70px;
     height: 20px;
-    background-color: blue;
+    background-color: #2980ff;
     border-radius: 20px;
     color: white;
   }
 }
 
+/* journey section */
 
-.card {
+.journey-section {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .journey-section-heading {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .journey-section-heading > p {
+    margin-top: 20px;
+    width: 40%;
+    text-align: center;
+    font-size: 18px;
+    color: grey;
+  }
+
+  .journey-section-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .journey-section-card-active {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 33%;
+    min-width: 250px;
+    aspect-ratio: 6/7;
+    background-color: #2980ff;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .journey-section-card-active .card-icon {
+    border-radius: 100%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .journey-section-card {
+    margin-top: 40px;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    position: relative;
+    width: 33%;
+    min-width: 250px;
+    aspect-ratio: 1/1;
+    background-color: rgb(226, 226, 226);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+
+    .card-icon {
+      border-radius: 100%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 900;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+      color: #2980ff;
+    }
+  }
+
+  .card-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    border-bottom-left-radius: 80%;
+    object-fit: cover;
+  }
+
+  .learn-more {
+    display: inline;
+
+    color: white;
+    margin-left: 3px;
+    font-size: 25px;
+  }
+
+  .card-content {
+    padding-top: 5%;
+    margin-left: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .journey-section-card .card-icon {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: 900;
+    width: 60px;
+    height: 60px;
+    color: #2980ff;
+  }
+
+  .journey-section-card-active .p {
+    margin-top: 20px;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+
+/* Adventure Section */
+
+.adventure-section {
+  display: flex;
+
+  width: 100%;
   position: relative;
-  width: 300px;
-  height: 400px;
-  background-color: blue; 
-  color: white;
-  border-radius: 10px;
-  padding: 20px;
-  overflow: hidden;
+  padding-top: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-bottom: 0;
+  aspect-ratio: 3/1;
+  min-width: 600px;
+  justify-content: space-around;
+
+  .adventure-section-image {
+    width: clamp(400px, 30%, 600px);
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 5px;
+  }
+
+  .adventure-section-content {
+    width: 60%;
+    justify-content: center;
+    min-width: 600px;
+    position: relative;
+    display: inline;
+    padding-top: clamp(50px, 5vw, 90px);
+    padding-bottom: clamp(50px, 5vw, 90px);
+    aspect-ratio: 3/1;
+    .adventure-section-content1 {
+      display: flex;
+      height: 33%;
+      .adventure-section-heading1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        width: 40%;
+        font-size: 50px;
+      }
+      .adventure-section-text1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        padding: 20px;
+        height: 100%;
+        padding-top: 0px;
+        width: 60%;
+      }
+    }
+
+    .adventure-section-content2 {
+      display: flex;
+      height: 33%;
+      .adventure-section-heading2 {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+
+        .adventure-section-heading2-h2 {
+          letter-spacing: 10px;
+        }
+      }
+    }
+
+    .adventure-section-content3 {
+      display: flex;
+      height: 33%;
+      .adventure-section-heading3 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        width: 50%;
+        font-size: 50px;
+      }
+      .adventure-section-text2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        padding: 25px;
+        height: 100%;
+        padding-top: 0px;
+        width: 50%;
+      }
+    }
+  }
 }
 
-.card-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 150px;
-  height: 150px; 
-  border-bottom-left-radius: 80%;
-  object-fit: cover;
-}
+/* footer section */
 
-.card-content {
-  padding-top: 120px; 
-}
+.footer-section {
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4%;
+  padding-right: 6%;
+  padding-bottom: 80px;
 
-h3 {
-  margin: 0;
-  font-size: 1.5em;
-}
+  .discount-display {
+    margin-left: 40px;
+    width: 40%;
+    height: 150px;
+    display: flex;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+  .discount {
+    display: flex;
+    justify-content: center;
+    color: #2980ff;
+    width: 60%;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .valid-till {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 22px;
+  }
 
-p {
-  font-size: 1em;
-  line-height: 1.5;
+  .booking-button {
+    background-image: url("resources/ad79f96a8cb44db2e9289a2223a1f064.jpg");
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 20px;
+    border: none;
+    width: 60%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 34px;
+  }
 }
-
+p + p {
+  margin-top: 0;
+}
