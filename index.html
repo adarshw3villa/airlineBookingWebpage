@@ -15,6 +15,22 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -40,7 +56,7 @@
     <section class="hero">
       <div class="slider-indicator">
         <div class="circle-active">1</div>
-        <div class="circle">2</div>
+        <div class="circle circle-1">2</div>
         <div class="circle">3</div>
       </div>
       <div class="hero-content">
@@ -48,17 +64,12 @@
         <h1>Experience <br />The Magic Of <br />Flight!</h1>
         <div class="hero-section-btn">
           <button class="btn-primary">Book A Trip Now</button>
-          <div class="play-btn-box"><button class="play-btn">▶</button></div>
+          <div class="play-btn-box"><button class="play-btn"><i class="fa-solid fa-play"></i></button></div>
         </div>
       </div>
 
-      <!-- <div class="hero-image-wrapper">
-        <img
-          src="https://media-hosting.imagekit.io//a78c746a80f3468f/Tarom.b737-700.yr-bgg.arp-removebg-preview.png?Expires=1836972054&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=dTkrzq7w2fjTxecf2-LVv8bOBKPd8naBRkX0WacniYTcY7Vk8cFAK~iHyAUgqqHRMTBrP~0gVZugsXQIYxNP21x35pNOdPHzhARPkG7e3v9JePsmBZSE7c1maNlHYw625jm82WADqqxIOs78QUNvpGQuORKT-deaxqZUfsIcdxawTaYfydJBA9Io5y1BtIu0ad8phm2BWdrmVKUPt7roC8nMoDe3GEH4Wn5ZAqr~ugdFAJxnZjp9F6bUoLksyahaaZEyTCU3vjRwZs18lEMbYDJIHyQEHlFxKRRrKLYPNhc-vugaar7FXlPopKLORTH3y3puPgNpe-bJdS6Evc0BCg__"
-          alt="Airplane"
-          class="hero-image"
-        />
-      </div> -->
+      <div class="hero-image-wrapper">
+      </div>
 
       <div class="know-more-card">
         <div class="know-more-card-up">
@@ -121,7 +132,7 @@
         </div>
       </div>
 
-      <div class="cards">
+      <div class="owl-carousel owl-theme cards">
         <div class="destination-card">
           <img
             src="https://www.travelandleisure.com/thmb/wsA6EXFuYkqtuJGLbQWw05-cwPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lake-como-MOSTBEAUTIFUL0921-cb08f3beff1041e4beefc67b5e956b23.jpg"
@@ -134,7 +145,7 @@
               <h3>Forest Wild Life</h3>
               <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
-                <p>NRT,Indonesia</p>
+                <p>NRT, Indonesia</p>
               </div>
             </div>
             <div class="star">
@@ -155,7 +166,7 @@
               <h3>Forest Wild Life</h3>
               <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
-                <p>NRT,Indonesia</p>
+                <p>NRT,  Indonesia</p>
               </div>
             </div>
             <div class="star">
@@ -175,7 +186,70 @@
               <h3>Forest Wild Life</h3>
               <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
-                <p>NRT,Indonesia</p>
+                <p>NRT,  Indonesia</p>
+              </div>
+            </div>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              4.7
+            </div>
+          </div>
+        </div>
+
+        <div class="destination-card">
+          <img
+            src="https://www.travelandleisure.com/thmb/wsA6EXFuYkqtuJGLbQWw05-cwPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lake-como-MOSTBEAUTIFUL0921-cb08f3beff1041e4beefc67b5e956b23.jpg"
+            alt="destination-image"
+            class="destination-image"
+          />
+
+          <div class="destination-details">
+            <div>
+              <h3>Forest Wild Life</h3>
+              <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NRT,  Indonesia</p>
+              </div>
+            </div>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              4.7
+            </div>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img
+            src="https://www.travelandleisure.com/thmb/wsA6EXFuYkqtuJGLbQWw05-cwPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lake-como-MOSTBEAUTIFUL0921-cb08f3beff1041e4beefc67b5e956b23.jpg"
+            alt="destination-image"
+            class="destination-image"
+          />
+
+          <div class="destination-details">
+            <div>
+              <h3>Forest Wild Life</h3>
+              <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NRT,  Indonesia</p>
+              </div>
+            </div>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              4.7
+            </div>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img
+            src="https://www.travelandleisure.com/thmb/wsA6EXFuYkqtuJGLbQWw05-cwPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lake-como-MOSTBEAUTIFUL0921-cb08f3beff1041e4beefc67b5e956b23.jpg"
+            alt="destination-image"
+            class="destination-image"
+          />
+          <div class="destination-details">
+            <div>
+              <h3>Forest Wild Life</h3>
+              <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NRT,  Indonesia</p>
               </div>
             </div>
             <div class="star">
@@ -236,7 +310,6 @@
             </p>
             <div>
               <a class="learn-more" href="#">LEARN MORE </a>
-              
             </div>
           </div>
         </div>
@@ -313,5 +386,62 @@
         Book A Flight Now <i class="fa-solid fa-arrow-right"></i>
       </button>
     </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        const owl = $(".owl-carousel");
+
+        owl.owlCarousel({
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 1000,
+          autoplayHoverPause: true,
+          stagePadding: 80,
+          margin: 10,
+          nav: false,
+          dots: false,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            768: {
+              items: 2,
+            },
+            1024: {
+              items: 3,
+            },
+          },
+        });
+
+        // Pause autoplay when mouse enters the section
+        $(".owl-theme cards").on("mouseenter", function () {
+          owl.trigger("stop.owl.autoplay");
+        });
+
+        // Resume autoplay when mouse leaves the section
+        $(".owl-theme cards").on("mouseleave", function () {
+          owl.trigger("play.owl.autoplay", [2000]); // resume with 3s delay
+        });
+
+        $(".right-scroll").click(function () {
+          owl.trigger("next.owl.carousel");
+        });
+        $(".left-scroll").click(function () {
+          owl.trigger("prev.owl.carousel");
+        });
+      });
+    </script>
   </body>
 </html>

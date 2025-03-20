@@ -12,7 +12,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 h3 {
@@ -44,8 +44,8 @@ a {
 nav {
   display: flex;
   justify-content: space-between;
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
   margin: 20px;
   margin-right: 20px;
   width: 100%;
@@ -87,17 +87,36 @@ nav {
 }
 
 .hero {
+  margin-top: 30px;
+  margin-left: 2%;
+  width: 100%;
+  margin-right:2%;
   display: flex;
-  padding: 4rem;
+  height: 80vh;
   position: relative;
-  background: linear-gradient(to right, #dfefff, #ffffff);
+  background-image: url("https://images.unsplash.com/photo-1504753930079-4c0b71580d40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 40px;
   width: 100%;
-  height: 500px;
-  margin-left: 2%;
-  margin-right: 2%;
+  padding-left: 6%;
+  padding-right: 6%;
   align-items: center;
-  justify-content: space-between;
+
+  .hero-image-wrapper {
+    position: absolute;
+    background-image: url("https://media-hosting.imagekit.io//a78c746a80f3468f/Tarom.b737-700.yr-bgg.arp-removebg-preview.png?Expires=1836972054&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=dTkrzq7w2fjTxecf2-LVv8bOBKPd8naBRkX0WacniYTcY7Vk8cFAK~iHyAUgqqHRMTBrP~0gVZugsXQIYxNP21x35pNOdPHzhARPkG7e3v9JePsmBZSE7c1maNlHYw625jm82WADqqxIOs78QUNvpGQuORKT-deaxqZUfsIcdxawTaYfydJBA9Io5y1BtIu0ad8phm2BWdrmVKUPt7roC8nMoDe3GEH4Wn5ZAqr~ugdFAJxnZjp9F6bUoLksyahaaZEyTCU3vjRwZs18lEMbYDJIHyQEHlFxKRRrKLYPNhc-vugaar7FXlPopKLORTH3y3puPgNpe-bJdS6Evc0BCg__");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 13;
+    right: -25%;
+    top: 0;
+    height: 68%;
+    width: 80%;
+  }
+
 }
 
 /* Slider Indicator */
@@ -111,9 +130,10 @@ nav {
   position: relative;
   z-index: 10;
   .circle {
-    width: 30px;
-    background: linear-gradient(to right, #dfefff, #ffffff);
-    height: 30px;
+    position: relative;
+    border: 2px solid white;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     color: white;
     font-weight: bold;
@@ -122,7 +142,6 @@ nav {
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: all 0.3s ease;
   }
 
   .slider-indicator circle:first-child {
@@ -130,22 +149,33 @@ nav {
   }
 }
 
-.slider-indicator::after {
+.circle-active::after {
   content: "";
   background: #fff;
-  height: 65%;
+  height: 248px;
   width: 5px;
   display: block;
   position: absolute;
-  left: 12px;
+  left: 27px;
+  top: 110px;
   z-index: -1;
 }
-
+.circle-1::after {
+  content: "";
+  background: #fff;
+  height: 197px;
+  width: 5px;
+  display: block;
+  position: absolute;
+  left: 25px;
+  top: 57px;
+  z-index: -1;
+}
 .circle-active {
   background-color: white;
   color: black;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   font-weight: bold;
   display: flex;
@@ -157,43 +187,13 @@ nav {
 }
 
 .hero-content {
-  max-width: 500px;
-}
-
-.hero-content h4 {
-  color: #555;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
-
-.hero-content {
-  position: absolute;
-  left: 20%;
-  min-width: 20%;
-
-  .hero-content h4 {
-    color: #555;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-  }
+  position: relative;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 5%;
 
   .btn-primary {
     background-color: #2980ff;
@@ -214,8 +214,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
     border: none;
     background-color: white;
@@ -227,13 +227,18 @@ nav {
 
   .play-btn {
     display: flex;
-    font-size: 8px;
+    height: 30px;
+    width: 30px;
     border-radius: 100%;
     border: none;
     background-color: #1c5fc4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: white;
     cursor: pointer;
+
+    i {
+      margin: 8px;
+    }
   }
 
   .btn-primary:hover {
@@ -241,30 +246,64 @@ nav {
   }
 }
 
-/* Hero Image */
-/* .hero-image-wrapper {
-  position: absolute;
-  border: 2px solid black;
-  z-index: 13;
-  left: 50%;
-  .hero-image {
-    max-width: 600px;
-  }
-} */
+.hero-content h4 {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
 
 /* Know More Card */
 .know-more-card {
-  position: relative;
-  right: 0;
-  width: 150px;
-  height: 150px;
-  background: white;
+  margin-right: 200px;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  margin-right: 2%;
+  border: 2px solid #000;
+  width: 30%;
+  height: 33%;
   padding: 1rem;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
   .know-more-card-up {
     display: flex;
+    position: absolute;
+    width: 80%;
+    top: 0;
+    right: 0;
     justify-content: space-around;
+    background-color: lightblue;
+
+    border-top-left-radius: 20px;
+    border: 20px;
+    /* border-bottom-left-radius: 20px; */
+    height: 40%;
+    align-items: center;
+  }
+
+  .know-more-card-down {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    justify-content: space-around;
+    background-color: lightblue;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    height: 60%;
+    align-items: center;
   }
 
   .know-more-card h4 {
@@ -292,23 +331,19 @@ nav {
   }
 }
 
-/* Buttons */
-
-/* Hero Section */
-
-/* Links section */
-
 .links {
+  margin-top: 60px;
   display: flex;
-  margin-right: 40px;
-  margin-top: 20px;
+  padding-left: 6%;
+  padding-right: 6%;
   height: 50px;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 
   .link-logo {
     display: flex;
-    width: 70%;
+
+    width: 80%;
     justify-content: space-between;
   }
   .folow {
@@ -316,8 +351,7 @@ nav {
     padding: 10px;
     display: flex;
     border: 30px black;
-    min-width: 200px;
-    max-width: 10%;
+    width: 15%;
     justify-content: space-between;
     border: 1px solid black;
     border-radius: 20px;
@@ -334,9 +368,8 @@ nav {
 
 .popular-destination-section {
   margin-top: 10px;
-
-  margin-left: 2%;
-  margin-right: 2%;
+  padding-left: 6%;
+  padding-right: 6%;
   gap: 0;
 
   .popular-destination-heading {
@@ -376,6 +409,7 @@ nav {
     padding: 4px;
     color: black;
     background: lightgrey;
+    cursor: pointer;
   }
 
   .right-scroll {
@@ -389,6 +423,7 @@ nav {
     border: 2px solid black;
     border-radius: 50%;
     padding: 4px;
+    cursor: pointer;
   }
 
   .cards {
@@ -397,9 +432,10 @@ nav {
   }
 
   .destination-card {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 100%;
   }
 
   .destination-card > img {
@@ -409,14 +445,19 @@ nav {
 
   .destination-details {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px;
     .location {
       display: flex;
-      flex-direction: row;
+      align-items: start;
+      padding: none;
+      column-gap: 10px;
       align-items: center;
-      justify-content: space-around;
-      margin-left: 4px;
+      color: rgb(141, 132, 132);
+      p {
+        margin-top: 0;
+      }
     }
   }
   .star {
@@ -476,7 +517,7 @@ nav {
     position: relative;
     width: 33%;
     min-width: 250px;
-    aspect-ratio: 6/7;
+    aspect-ratio: 3/4;
     background-color: #2980ff;
     color: white;
     border-top-left-radius: 20px;
@@ -532,8 +573,8 @@ nav {
     position: absolute;
     top: 0;
     right: 0;
-    width: 150px;
-    height: 150px;
+    width: 50%;
+    aspect-ratio: 1/1;
     border-bottom-left-radius: 80%;
     object-fit: cover;
   }
@@ -675,12 +716,11 @@ nav {
   margin-top: 0;
   display: flex;
   justify-content: space-between;
-  padding-left: 4%;
+  padding-left: 6%;
   padding-right: 6%;
   padding-bottom: 80px;
 
   .discount-display {
-    margin-left: 40px;
     width: 40%;
     height: 150px;
     display: flex;

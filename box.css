@@ -1,0 +1,40 @@
+.box{
+
+    height: 300px;
+    width: 600px;
+    background-color: lightblue;
+    position: relative;
+    z-index: -1;
+}
+
+.right{
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    left: 0;
+    top: 20%;
+    background: white;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.up{
+    height: 40%;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000;
+    border-top-left-radius: 50px;
+
+}
+
+.down{
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    border-radius: 40px;
+}
