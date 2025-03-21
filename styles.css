@@ -12,7 +12,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 h3 {
@@ -30,10 +30,9 @@ img {
 }
 
 header {
-  margin-bottom: 10px;
-  margin-top: 4px;
+  margin-top: 60px;
   margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 80px;
 }
 
 a {
@@ -86,11 +85,13 @@ nav {
   }
 }
 
-.hero {
-  margin-top: 30px;
-  margin-left: 2%;
+
+.hero-section{
   width: 100%;
-  margin-right:2%;
+  padding: 2%;
+}
+.hero {
+  width: 100%;
   display: flex;
   height: 80vh;
   position: relative;
@@ -159,6 +160,7 @@ nav {
   left: 27px;
   top: 110px;
   z-index: -1;
+  overflow: hidden;
 }
 .circle-1::after {
   content: "";
@@ -263,47 +265,72 @@ nav {
 
 /* Know More Card */
 .know-more-card {
-  margin-right: 200px;
+
   position: absolute;
-  right: 20px;
+  right: 0;
   bottom: 0;
-  margin-right: 2%;
-  border: 2px solid #000;
+  background-color: white;
   width: 30%;
-  height: 33%;
-  padding: 1rem;
+  height: 30%;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
   .know-more-card-up {
     display: flex;
+    border-top-right-radius: 20px;
     position: absolute;
     width: 80%;
+    margin: 5%;
     top: 0;
     right: 0;
-    justify-content: space-around;
-    background-color: lightblue;
+    justify-content: center;
+    gap: 20px;
+    background-color: whitesmoke;
 
     border-top-left-radius: 20px;
     border: 20px;
-    /* border-bottom-left-radius: 20px; */
-    height: 40%;
-    align-items: center;
+    border-bottom-left-radius: 20px;
+    height: 30%;
+    padding-bottom: 20px;
+    align-items: end;
+
+    h4{
+      font-size: 29px;
+    }
+
+    i{
+      font-size: 30px;
+      cursor: pointer;
+    }
   }
 
   .know-more-card-down {
+    margin: 5%;
     display: flex;
     position: absolute;
-    width: 100%;
+    width: 90%;
     bottom: 0;
     right: 0;
-    justify-content: space-around;
-    background-color: lightblue;
+    padding: 20px;
+    background-color: whitesmoke;
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
     border-bottom-left-radius: 40px;
-    height: 60%;
+    height: 50%;
     align-items: center;
+
+    .card-images{
+      width: 50%;
+      /* margin-left: 20px; */
+    }
+
+    .know-more-content{
+      width: 50%;
+      align-self: center;
+      justify-self: start;
+    }
+
+
   }
 
   .know-more-card h4 {
@@ -318,8 +345,8 @@ nav {
   }
 
   .card-images img {
-    width: 40px;
-    height: 40px;
+    width: 33%;
+    aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
     margin-left: -20px;
@@ -332,7 +359,7 @@ nav {
 }
 
 .links {
-  margin-top: 60px;
+  margin-top: 30px;
   display: flex;
   padding-left: 6%;
   padding-right: 6%;
@@ -367,14 +394,14 @@ nav {
 /* Popular Destination Section */
 
 .popular-destination-section {
-  margin-top: 10px;
+  margin-top: 100px;
   padding-left: 6%;
   padding-right: 6%;
   gap: 0;
 
   .popular-destination-heading {
     margin-left: 20px;
-    margin-bottom: none;
+    margin-bottom: 10px;
     font-size: 40px;
   }
   .popular-destination-section-details {
@@ -436,6 +463,7 @@ nav {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 10px;
   }
 
   .destination-card > img {
@@ -759,4 +787,16 @@ nav {
 }
 p + p {
   margin-top: 0;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.5;
 }
