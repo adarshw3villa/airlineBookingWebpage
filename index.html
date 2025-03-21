@@ -409,7 +409,7 @@
         </div>
       </div>
 
-      
+
     </section>
 
     <section class="footer-section">
@@ -464,12 +464,21 @@
         });
 
         // Pause autoplay when mouse enters the section
-        $(".owl-theme cards").on("mouseenter", function () {
+        $(".owl-theme cards scroll-button").on("mouseenter", function () {
           owl.trigger("stop.owl.autoplay");
         });
 
         // Resume autoplay when mouse leaves the section
         $(".owl-theme cards").on("mouseleave", function () {
+          owl.trigger("play.owl.autoplay", [2000]); // resume with 3s delay
+        });
+
+        $(".scroll-button").on("mouseenter", function () {
+          owl.trigger("stop.owl.autoplay");
+        });
+
+        // Resume autoplay when mouse leaves the section
+        $(".scroll-button").on("mouseleave", function () {
           owl.trigger("play.owl.autoplay", [2000]); // resume with 3s delay
         });
 
